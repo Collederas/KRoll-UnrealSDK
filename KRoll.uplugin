@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "KRoll",
+	"Description": "Integrate with KRoll API to fetch live config entries",
+	"Category": "Other",
+	"CreatedBy": "Fabrizio Scandola",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "KRoll",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault"
+		},
+	]
+}
