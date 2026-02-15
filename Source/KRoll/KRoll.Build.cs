@@ -31,7 +31,8 @@ public class KRoll : ModuleRules
 				"HTTP",
 				"Json",
 				"JsonUtilities",
-				"DeveloperSettings"
+				"DeveloperSettings",
+				"GameplayAbilities"
 			}
 			);
 			

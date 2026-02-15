@@ -1,22 +1,27 @@
 #pragma once
 
+#include "CoreMinimal.h"
 #include "Engine/DeveloperSettings.h"
 #include "KRollSettings.generated.h"
 
-UCLASS(config=Game, defaultconfig, meta=(DisplayName="KRoll"))
+UCLASS(Config=Game, DefaultConfig, meta=(DisplayName="KRoll"))
 class KROLL_API UKRollSettings : public UDeveloperSettings
 {
-    GENERATED_BODY()
+	GENERATED_BODY()
 
 public:
-    /** Base URL, e.g. https://api.kroll.dev */
-    UPROPERTY(EditAnywhere, Config, Category="KRoll")
-    FString Host;
+	// Shows up under Project Settings -> KRoll
+	UPROPERTY(Config, EditAnywhere, Category="Connection")
+	FString Host;
 
-    /** API key for client access */
-    UPROPERTY(EditAnywhere, Config, Category="KRoll")
-    FString ApiKey;
+	UPROPERTY(Config, EditAnywhere, Category="Connection")
+	FString ApiKey;
 
-	UPROPERTY(config, EditAnywhere, Category="KRoll")
-	bool bAutoFetchOnGameStart = false;
+	// If true, FetchConfigs() called automatically on subsystem Initialize
+	UPROPERTY(Config, EditAnywhere, Category="Behavior")
+	bool bAutoFetchOnInit = false;
+
+	// If true, allow mild coercions (e.g., "true"/"1" -> bool, numeric strings -> number)
+	UPROPERTY(Config, EditAnywhere, Category="Behavior")
+	bool bAllowTypeCoercion = true;
 };

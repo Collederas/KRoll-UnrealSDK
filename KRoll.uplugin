@@ -19,6 +19,12 @@
 			"Name": "KRoll",
 			"Type": "Runtime",
 			"LoadingPhase": "PreDefault"
-		},
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "GameplayAbilities",
+			"Enabled": true
+		}
 	]
 }
